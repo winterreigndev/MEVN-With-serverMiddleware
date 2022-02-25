@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+
+/* Color Codes
+-------------------------------------------------------------- */
+:root {
+    --todo-bg: #242e42;
+    --todo-text: rgba(255,255,255,0.6);
+    --todo-container: #2f3b52;
+    --todo-primary: #1ac0c6;
+    --todo-secondary: #ff6150;
+    --todo-additional: #ffa822;
+    --todo-forms: #20293c;
+  }
+  
+  
+  /* Global
+  -------------------------------------------------------------- */
+  * {
+    margin: 0;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    -moz-transition: background-color 0.3s linear, color 0.3s linear;
+    -o-transition: background-color 0.3s linear, color 0.3s linear;
+    -ms-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;
+  }
+  
+  html,
+  body {
+    margin:0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: var(--todo-bg);
+    color: var(--todo-text);
+    font-size: 100%;
+  }
+  
+  .content {
+    background-color: var(--todo-container);
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 5px;
+  }
+
+  .mobile {
+    display: none;
+  }
+  
+  p {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  
+  strong {
+    color: var(--todo-primary);
+  }
+  
+  em {
+    color: var(--todo-secondary);
+  }
+
+  i {
+    color: #ffffff;
+    background-color: var(--todo-primary);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  i:hover {
+    color: #ffffff;
+    background-color: var(--todo-secondary);
+  }
+
+  .from-top {
+    margin: 8% 0 10px 0;
+  }
+  
+  blockquote {
+    background-color: var(--todo-bg);
+    padding: 10px;
+    font-style: italic;
+    color: var(--todo-text);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    display: inline-block;
+    padding: 5px;
+  }  
+
+  .text-p {
+    padding: 5px;
+    border: 2px solid transparent;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+
+  /* Header
+  -------------------------------------------------------------- */
+  header {
+    color: var(--todo-primary);
+    font-size: 3rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  header span {
+    color: var(--todo-additional);
+  }
+
+
+  /* To Do List
+  -------------------------------------------------------------- */
+  .number {
+    padding: 5px 10px;
+    background-color: var(--todo-primary);
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .todo-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    color: var(--todo-additional);
+  }
+
+  .todo-description {
+    font-style: italic;
+  }
+
+  .todo-items {
+    margin: 20px 0;
+  }
+
+  .todo-add {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todo-container {
+    background-color: var(--todo-bg);
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 8% 20% 60% 12%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todo-complete {
+    opacity: 0.3;
+  }
+
+  /* Forms
+  -------------------------------------------------------------- */
+  .todo-forms {
+    background-color: var(--todo-forms);
+    color: var(--todo-text);
+    border: 2px solid var(--todo-forms);
+    padding: 5px;
+    width: 95%;
+    border-radius: 5px;
+  }
+
+  .todo-forms:focus {
+    border: 2px solid var(--todo-additional);
+    outline: none;
+  }
+
+  .todo-add button {
+    background-color:  var(--todo-forms);
+    color: var(--todo-text);
+    border: 2px solid var(--todo-forms);
+    border-radius: 5px;
+    padding: 5px;
+    width: 95%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .todo-add button:hover {
+    background-color:  var(--todo-secondary);
+    color: var(--todo-text);
+    border: 2px solid var(--todo-secondary);
+  }
+
+
+  /* Footer
+  -------------------------------------------------------------- */
+
+  footer {
+    width: 100%;
+    color: var(--todo-text);
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  footer a {
+    color: var(--todo-text);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--todo-primary);
+    text-decoration: underline;
+  }
+
+  /* Responsive
+  -------------------------------------------------------------- */
+  @media (max-width: 1050px) and (min-width: 300px) {
+    .content {
+      width: 90%;
+    }
+
+    .todo-add {
+      grid-template-columns: 30% 40% 30%;
+    }
+  
+    .todo-container {
+      grid-template-columns: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    .no-display {
+      display: none;
+    }
+  }
